@@ -1,12 +1,12 @@
 name: generate-image-wall
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+#  push:
+#    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
   schedule:
-    - cron: '0 17 * * *'  # 01:00 UTC+8 everyday
+    - cron: '42 16 1 1/1 *'  # at 00:42 UTC+8 on the 1st day of every month
   workflow_dispatch:
 
 jobs:
