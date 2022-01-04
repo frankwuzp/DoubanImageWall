@@ -2,7 +2,7 @@ name: generate-image-wall
 
 on:
   schedule:
-    - cron: '0 6 * * *' # 6:00 UTC everyday
+    - cron: '0 17* * *' #01:00 UTC+8 everyday
   workflow_dispatch:
 
 jobs:
@@ -24,10 +24,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script to generate movie poster wall
-        run: python image_wall.py -i=49729399 -c=18 -r=8 -o=8 -rd=True
+        run: python image_wall.py -i=66888874 -c=18 -r=8 -o=8 -rd=True
 
-      - name: execute py script to generate album cover wall
-        run: python image_wall.py -i=49729399 -m='music' -c=10 -r=8 -o=8 -rd=True -s=True
+#      - name: execute py script to generate album cover wall
+#        run: python image_wall.py -i=49729399 -m='music' -c=10 -r=8 -o=8 -rd=True -s=True
           
       - name: commit files
         run: |
